@@ -1,0 +1,368 @@
+/* Global */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --MarineBlue: hsl(213, 96%, 18%);
+    --PurplishBlue: hsl(243, 100%, 62%);
+    --PastelBlue: hsl(228, 100%, 84%);
+    --LightBlue: hsl(206, 94%, 87%);
+    --StrawberryRed: hsl(354, 84%, 57%);
+    --CoolGray: hsl(231, 11%, 63%);
+    --LightGray: hsl(229, 24%, 87%);
+    --Magnolia: hsl(217, 100%, 97%);
+    --Alabaster: hsl(231, 100%, 99%);
+    --White: hsl(0, 0%, 100%);
+}
+
+/* Reusable */
+p {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 14px;
+}
+
+h1 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    margin-bottom: 10px;
+    color: var(--MarineBlue);
+}
+
+h2 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--MarineBlue);
+    font-size: 16px;
+}
+
+h3 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--White);
+}
+
+h4 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 13px;
+    color: var(--LightGray);
+    margin-bottom: 5px;
+}
+
+h5 {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.container {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--Magnolia);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    background-color: var(--White);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+    width: 884px;
+}
+
+/* Sidebar */
+.sidebar {
+    background-image: url(./assets/images/bg-sidebar-desktop.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 274px;
+    height: 568px;
+    padding: 40px;
+}
+
+.list {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.list-number {
+    border: 1px solid var(--LightBlue);
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--White);
+    margin-right: 15px;
+}
+
+.list-number:hover {
+    cursor: pointer;
+}
+
+.list-number-active {
+    color: var(--MarineBlue);
+    background-color: var(--LightBlue);
+    cursor: pointer;
+    transition: ease-out 0.3s;
+}
+
+/* Personal Details */
+.personal-info-details {
+    margin: 40px 100px;
+}
+
+.heading {
+    margin-bottom: 40px;
+}
+
+.heading-title-details {
+    color: var(--CoolGray);
+}
+
+.input-container {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.heading-and-required-field {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    cursor: pointer;
+}
+
+.required-field-text {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--StrawberryRed);
+    display: none;
+}
+
+input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid var(--CoolGray);
+    padding: 10px;
+}
+
+input:focus {
+    border: 1px solid var(--PurplishBlue);
+    outline: none;
+}
+
+input.error {
+    border-color: var(--StrawberryRed);
+}
+
+.step {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+button,
+.go-back {
+    padding: 13px 20px;
+    border-radius: 4px;
+    border: none;
+    background-color: var(--PurplishBlue);
+    color: var(--White);
+    margin-top: 60px;
+}
+
+button:hover {
+    background-color: var(--MarineBlue);
+    transition: ease-out 0.3s;
+}
+
+/* Select Your Plan */
+.select-your-plan {
+    margin: 40px 100px;
+}
+
+.main-plans {
+    width: 100%;
+}
+
+.plan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.plan-listing {
+    border: 1px solid var(--LightGray);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 110px;
+    height: 150px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.plan-listing-center {
+    margin: 0 20px;
+}
+
+.plan-listing:hover,
+.plan-listing:focus {
+    background-color: var(--Magnolia);
+    border-color: var(--PurplishBlue);
+    transition: ease-out 0.4s;
+}
+
+.plan-listing img {
+    width: 40px;
+}
+
+.change-plan {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    background-color: var(--LightGray);
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.monthly,
+.yearly {
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--CoolGray);
+}
+
+/* Toggle Button */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 46px;
+    height: 15px;
+    margin: 0 10px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--MarineBlue);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 10px;
+    width: 10px;
+    left: 5px;
+    bottom: 2px;
+    background-color: var(--White);
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--MarineBlue);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px var(--MarineBlue);
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  /* Stage */
+  .stage {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+  }
+
+  #go-to-stage-one {
+    text-decoration: none;
+    background-color: var(--White);
+    color: var(--CoolGray);
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 14px;
+  }
+
+  #go-to-stage-one:hover {
+    color: var(--PurplishBlue);
+  }
+
+  /* Adds-ons Pick */
+  .adds-on-list {
+    width: 100%;
+  }
+
+  .adds-on-listing {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--LightGray);
+    border-radius: 10px;
+    margin-bottom: 15px;
+    padding: 15px;
+  }
+
+  .check {
+    display: flex;
+    align-items: center;
+  }
+
+  .overall-heading {
+    width: 100%;
+  }
